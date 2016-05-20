@@ -5,33 +5,33 @@ Some terms are adapted to avoid learning a bunch of emacs vocaburary so don't ta
 # Getting start
 Download Emacs GUI version.
 Then download .emacs file after that paste the file into you home directory.
-(If you don't know you can figure it out by open the terminal; type cd then ENTER then type pwd then ENTER, here you get home directory)
+(If you don't know you can figure it out by open the terminal; type `cd` then `ENTER` then type `pwd` then `ENTER`, here you get home directory)
 
 # Basic usage
 
 ## files
-- space then f: open current directory and searching for file
-- space then k: close current open file.
-- alt+f: find files in the project. The project is the directory that has .projectile file. If there is no such file, you can create one to make it a project.
+- space then `f`: open current directory and searching for file
+- space then `k`: close current open file.
+- alt+`f`: find files in the project. The project is the directory that has .projectile file. If there is no such file, you can create one to make it a project.
 (sometimes this command is not automatically update for the new files, so that you should press space then m after that run projectile-cache-invalidated)
-- alt+b: open the list of open files
-- alt+p: switch between project
+- alt+`b`: open the list of open files
+- alt+`p`: switch between project
 
 ## comment
-- space then c then i: commite current line
-- space then c then c: comment current line then duplicate into another line
+- space then `c` then `i`: commite current line
+- space then `c` then `c`: comment current line then duplicate into another line
 
 ## window
-- alt+3: split vertically
-- alt+0: maximize another open window
-- alt+1: maximize current window
+- alt+`3`: split vertically
+- alt+`0`: maximize another open window
+- alt+`1`: maximize current window
 space+o: switching between window
 
 ## evil-mode
 This makes emacs behave like vim. Basically there are three modes in vim: 
-1. insert mode: you can type in this mode. Enter this mode by press i and exit by esc.
-2. normal mode: for viewing basic motion are up(k) down(j) left(h) right(l).
-3. visual mode: for selecting. enter this mode by press v and exit by esc
+1. insert mode: you can type in this mode. Enter this mode by press `i` and exit by `esc`.
+2. normal mode: for viewing basic motion are up(`k`) down(`j`) left(`h`) right(`l`).
+3. visual mode: for selecting. enter this mode by press `v` and exit by `esc`
 
 I suggest the following link for basic vim and it should take roughly 25 minutes:
 http://www.openvim.com/

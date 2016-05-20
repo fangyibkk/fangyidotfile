@@ -230,7 +230,7 @@ Return a list of installed packages or nil for every skipped package."
 
 
 ;; Assuming you wish to install "iedit" and "magit"
-(ensure-package-installed 'iedit 'magit 'helm 'projectile 'powerline 'evil-mode 'evil-leader 'helm-swoop 'yasnippet 'undo-tree 'web-mode 'js2-mode 'json-mode)
+(ensure-package-installed 'iedit 'magit 'solarized-theme 'helm 'projectile 'powerline 'evil 'evil-leader 'helm-swoop 'yasnippet 'undo-tree 'web-mode 'js2-mode 'json-mode)
 
 ;;; powerline
 (require 'powerline)
