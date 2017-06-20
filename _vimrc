@@ -47,3 +47,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set tabstop=4
+
+
+"No error beeb
+set noeb vb t_vb=
