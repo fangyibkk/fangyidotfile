@@ -69,8 +69,9 @@ set whichwrap+=<,>,h,l
 set runtimepath^=~/vimfiles/bundle/ctrlp.vim
 
 "Color theme
-let g:molokai_original = 1
-colorscheme molokai
+" let g:molokai_original = 1
+" colorscheme molokai
+colorscheme xoria256
 
 " Prevent jjj, kkk from laging
 set lazyredraw
@@ -97,3 +98,48 @@ endfunction
 nnoremap <F9> :call JumpToCSS()<CR>
 " Reload your vim with command
 " :so %
+
+"Custom function
+
+let mapleader=","
+
+" TODO combined multiple whitesapce in the selection
+
+function! StripTrailingWhitespace()
+    " Save cursor position
+    let l:save = winsaveview()
+    " Remove trailing whitespace
+    %s/\s\+$//e
+    " Move cursor to original position
+    call winrestview(l:save)
+    echo "Stripped trailing whitespace"
+endfunction
+
+function! Uppercase_sql_keyword()
+    let l:save = winsaveview()
+    %s/\<select\>/SELECT/e
+    %s/\<from\>/FROM/e
+    %s/\<where\>/WHERE/e
+    %s/\<left join\>/LEFT JOIN/e
+    %s/\<inner join\>/INNER JOIN/e
+    %s/\<join\>/JOIN/e
+    %s/\<on\>/ON/e
+    %s/\<as\>/AS/e
+    %s/\<and\>/AND/e
+    %s/\<or\>/OR/e
+    %s/\<order by\>/ORDER BY/e
+    %s/\<group by\>/GROUP BY/e
+    %s/\<asc\>/ASC/e
+    echo "done uppercasing keyword"
+    call winrestview(l:save)
+endfunction
+
+
+"Binding section
+
+noremap <leader>aa :call Uppercase_sql_keyword()<cr>
+noremap <leader>sop :source %<cr>
+
+
+echo "DONE SOURCING"
+
